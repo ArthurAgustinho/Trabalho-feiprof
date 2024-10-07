@@ -55,6 +55,9 @@ header img {
     height: auto; /* Mantém a proporção da imagem */
 }
 
+.abas-textos2 {
+    max-width: 1800px;
+}
 
 .Profissões-em-Alta {
     display: flex;
