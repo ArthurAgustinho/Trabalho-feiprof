@@ -23,7 +23,6 @@
 
 body {
     background-color: #1E1C31;
-    max-width: 1200px;
     width: 100%;
     color: var(--branco);
     font-family: 'Chakra Petch', sans-serif;
@@ -62,9 +61,15 @@ header img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 1200px;
+    max-width: 1800px;
     width: 100%;
     margin: 0 auto;
+}
+
+.caixa-hardware, .caixa-software {
+    max-width: 1200px; /* Define um tamanho máximo */
+    width: 100%; /* A caixa ocupa 100% da largura disponível até o máximo */
+    margin: 20px auto;
 }
 
 .titulo-principal {
@@ -123,8 +128,8 @@ h3, .aba-conteudo-titulo-principal {
 }
 
 .aba-conteudo p {
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 22px; /* Aumenta o tamanho da fonte dos parágrafos */
+    line-height: 1.5; /* Mantém o espaçamento entre as linhas */
 }
 
 .botoes1, .botoes2 {
@@ -138,7 +143,7 @@ h3, .aba-conteudo-titulo-principal {
     background-color: var(--botao-inativo);
     color: var(--branco);
     padding: 1em;
-    font-size: 18px;
+    font-size: 22px; /* Aumenta o tamanho da fonte dos botões */
     width: 100%; /* Cada botão ocupa 100% do espaço disponível */
     border: none; /* Remove bordas padrão */
     border-bottom: 4px solid var(--botao-ativo);
@@ -147,6 +152,7 @@ h3, .aba-conteudo-titulo-principal {
     border-top: none;
     cursor: pointer; /* Indica que é clicável */
 }
+
 
 .botao:first-child {
     border-radius: 40px 0 0 0; /* Arredonda o primeiro botão */
