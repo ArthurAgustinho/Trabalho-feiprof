@@ -34,10 +34,21 @@ body {
     align-items: center; /* Centraliza horizontalmente */
     text-align: center; /* Centraliza o texto em todo o body */
     justify-content: center;
+    margin: 0; /* Remove margens do body */
+    padding: 0; /* Remove preenchimento do body */
 }
 
-.header {
-    background-color: #FFFFFF;
+header {
+    background-color: var(--botao-ativo); /* Cor de fundo */
+    padding: 20px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o conteúdo do header */
+    color: var(--branco); /* Cor do texto */
+    width: 100%; /* Garante que o header ocupa 100% da largura */
+}
+
+header img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do header */
+    height: auto; /* Mantém a proporção da imagem */
 }
 
 .Profissões-em-Alta {
