@@ -40,16 +40,22 @@ body {
 
 header {
     background-color: var(--botao-ativo); /* Cor de fundo */
-    padding: 20px; /* Espaçamento interno */
     text-align: center; /* Centraliza o conteúdo do header */
     color: var(--branco); /* Cor do texto */
+    margin: 0; /* Remove margens do body */
+    padding: 10px 0; /* Reduz o padding */
+    height: 50px; /* Define uma altura fixa, se desejado */
+    display: flex; /* Usar flexbox para centralizar conteúdo */
+    align-items: center; /* Alinha verticalmente ao centro */
+    justify-content: center; /* Alinha horizontalmente ao centro */
     width: 100%; /* Garante que o header ocupa 100% da largura */
 }
 
 header img {
-    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do header */
+    max-height: 40px; /* Limita a altura da imagem */
     height: auto; /* Mantém a proporção da imagem */
 }
+
 
 .Profissões-em-Alta {
     display: flex;
@@ -200,4 +206,13 @@ h3, .aba-conteudo-titulo-principal {
     text-transform: uppercase;
 }
 
-
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--botao-ativo);
+    color: var(--bg-color);
+    width: 100%;
+    height: 3rem;
+    margin-top: 2rem;
+}
