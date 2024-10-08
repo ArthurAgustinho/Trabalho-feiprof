@@ -55,9 +55,6 @@ header img {
     height: auto; /* Mantém a proporção da imagem */
 }
 
-.abas-textos2 {
-    max-width: 1800px;
-}
 
 .Profissões-em-Alta {
     display: flex;
@@ -69,17 +66,18 @@ header img {
     margin: 0 auto;
 }
 
-.caixa-hardware, .caixa-software {
-    max-width: 1200px; /* Define um tamanho máximo */
-    width: 100%; /* A caixa ocupa 100% da largura disponível até o máximo */
-    margin: 20px auto;
+.titulo-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1800px;
+    width: 100%;
 }
 
-.titulo-principal {
-    text-align: left;
-    width: 100%;
-    font-size: 32px;
-}
+    .abas-textos2 {
+        max-width: 1800px;
+    }
 
 /* Ajuste de todos os títulos principais (h2) */
 h2, .titulo-principal {
@@ -188,22 +186,6 @@ h3, .aba-conteudo-titulo-principal {
     display: none;
 }
 
-.graficos-container {
-    display: block;
-    justify-content: center;
-    margin-top: 0px;
-    padding: 0px
-
-}
-
-.grafico-container {
-    background-color: #3A375E; /* Cor de fundo da caixa */
-    padding: 20px; /* Espaçamento interno */
-    border-radius: 40px; /* Bordas arredondadas */
-    color: #FFFFFF !important; /* Muda a cor do texto dentro da caixa para branco */
-}
-
-
 .aba-conteudo-titulo-principal {
     font-size: 28px;
     text-align: center;
@@ -224,4 +206,95 @@ footer {
     width: 100%;
     height: 3rem;
     margin-top: 2rem;
+}
+
+/*gráficos*/
+
+.graficos {
+    margin-top: 2rem;
+}
+.graficos-container {
+    display: block;
+    justify-content: center;
+    margin-top: 0px;
+    padding: 0px
+
+}
+
+.grafico-container {
+    background-color: #3A375E; /* Cor de fundo da caixa */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 40px; /* Bordas arredondadas */
+    color: #FFFFFF !important; /* Muda a cor do texto dentro da caixa para branco */
+}
+
+
+
+
+
+/*cartas*/
+
+.Tcartas {
+    margin-top: 2rem
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+h1 {
+    margin-bottom: 40px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 20px;
+}
+
+.card {
+    height: 300px;
+    perspective: 1000px; /* Cria o efeito 3D */
+    margin: 26px;
+    width: calc(33.33% - 20px); /* Cada card ocupa 1/3 da largura do container menos margem */
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.card-front {
+    background-color: var(--botao-inativo);
+    border: 0.125rem solid var(--branco);
+    color: #FFF;
+}
+
+.card-back {
+    background-color: var(--botao-ativo);
+    color: var(--branco);
+    transform: rotateY(180deg); /* Verso virado */
+}
+
+.card-inner.flip {
+    transform: rotateY(180deg);
 }
